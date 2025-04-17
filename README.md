@@ -81,7 +81,7 @@ Tecnologias principais: Node.js, Express, MongoDB, JWT, Swagger.
 ├── tsconfig.json
 └── README.md
 ```
-📜 Documentação da API 📑
+## 📜 Documentação da API 📑
 
 A documentação interativa da API é gerada automaticamente com Swagger. Você pode acessá-la em:
 
@@ -91,7 +91,7 @@ http://localhost:3000/api-docs
 
 ```
 
-📡 Endpoints da API 🛠️
+## 📡 Endpoints da API 🛠️
 
 A API disponibiliza os seguintes endpoints:
 
