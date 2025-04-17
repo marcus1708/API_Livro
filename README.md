@@ -39,7 +39,7 @@ Tecnologias principais: Node.js, Express, MongoDB, JWT, Swagger.
 
 3. Instale as dependências:
    ```bash
-   em cd API_Livro :npm install
+   em cd API_Livro: npm install
    ```
 
    ou
@@ -48,12 +48,19 @@ Tecnologias principais: Node.js, Express, MongoDB, JWT, Swagger.
    yarn
    ```
 
-4. Execute o projeto:
+## 💻 Como rodar o projeto
    ```bash
 
-   em cd API_Livro: npm run dev
+   1 - execute o container Docker: docker ps -a
    ```
+   ```bash
 
+   2 - em cd API_Livro: npm run dev
+   ```
+   ```bash
+
+   3 - Acesse http://localhost:3000
+   ```
 ## Estrutura de Pastas
 
 ```
@@ -73,6 +80,14 @@ Tecnologias principais: Node.js, Express, MongoDB, JWT, Swagger.
 ├── package.json
 ├── tsconfig.json
 └── README.md
+```
+📜 Documentação da API 📑
+A documentação interativa da API é gerada automaticamente com Swagger. Você pode acessá-la em:
+
+```
+
+http://localhost:3000/api-docs
+
 ```
 
 📡 Endpoints da API 🛠️
@@ -113,7 +128,6 @@ Carrinhos 🛍️
 
 ## Melhorias Futuras !!!
 
-- Implementar autenticação JWT real
 - Dashboard para administrador
 - Histórico de pedidos
 - Testes automatizados com Cypress ou Robot Framework
@@ -132,8 +146,8 @@ Desenvolvido por Marcus Vinicius QA 🚀
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/marcus1708/Ecommerce.git
-cd Ecommerce
+git clone https://github.com/marcus1708/API_Livro.git
+cd API_Livro
 ```bash
 
 2. **Rode o comando:**
