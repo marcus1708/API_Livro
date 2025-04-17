@@ -82,6 +82,7 @@ Tecnologias principais: Node.js, Express, MongoDB, JWT, Swagger.
 └── README.md
 ```
 📜 Documentação da API 📑
+
 A documentação interativa da API é gerada automaticamente com Swagger. Você pode acessá-la em:
 
 ```
