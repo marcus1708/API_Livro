@@ -1,0 +1,113 @@
+construa pra mim uma API com um CRUD de Usuário, um CRUD de Livro, um CRUD de Loja e um CRUD de Carrinho, com as seguintes regras:
+
+CRUD de Usuário
+
+ - POST - campos: nome,email,profissão,idade,senha.
+          Deve gerar um ID ao criar com sucesso
+          Deve gerar uma mensagem "Usuário cadastrado com sucesso" em caso de sucesso e retornar o codigo 201
+          Deve gerar uma mensagem "Usuario já existe" em caso de falha e retornar o codigo 404    
+
+ - POST - Login do usuário
+          campos: nome,senha.
+          Deve gerar um Bearer Token ao criar com sucesso
+          Deve gerar uma mensagem "Usuário logado com sucesso" em caso de sucesso e retornar o codigo 201
+          Deve gerar uma mensagem "Dados inválidos" em caso de falha e retornar o codigo 404  
+     
+ - GET - Deve retornar o usuario cadastrado informando o id criado anteriormente
+         Deve retornar "Usuário nao encontrado" em caso de falha e retornar o codigo 404 
+
+ - PUT - Deve atualizar os dados do usuário, informando o id criado anteriormente
+         Deve gerar uma mensagem "Usuário atualizado com sucesso" em caso de sucesso e retornar o codigo 200
+         Deve gerar uma mensagem "Usuario com ID inválido" em caso de falha e retornar o codigo 404    
+
+ - PATCH - Deve atualizar os dados do usuário, informando o id criado anteriormente
+           Deve gerar uma mensagem "Usuário atualizado com sucesso" em caso de sucesso e retornar o codigo 200
+           Deve gerar uma mensagem "Usuario com ID inválido" em caso de falha e retornar o codigo 404    
+ 
+ - DELETE - Deve excluir os dados do usuário, informando o id criado anteriormente
+            Deve gerar uma mensagem "Usuário excluido com sucesso" em caso de sucesso e retornar o codigo 200
+            Deve gerar uma mensagem "Usuario com ID inválido" em caso de falha e retornar o codigo 400    
+            Deve gerar uma mensagem "Usuario já excluído" em caso de falha e retornar o codigo 404     
+
+CRUD de Livro
+
+ - POST - campos: título do livro,autor,ano,páginas,tema(drama,ficção,suspense...)
+          usuário deve estar logado para realizar esta ação, o bearer token deve ser informado no header da requisição
+          Deve gerar um ID ao criar com sucesso
+          Deve gerar uma mensagem "Livro cadastrado com sucesso" em caso de sucesso e retornar o codigo 201
+          Deve gerar uma mensagem "Livro já existe" em caso de falha e retornar o codigo 404    
+     
+ - GET - Deve retornar o livro cadastrado informando o id criado anteriormente
+         Deve retornar "Usuário nao encontrado" em caso de falha e retornar o codigo 404 
+
+ - PUT - Deve atualizar os dados do livro, informando o id criado anteriormente
+         usuário deve estar logado para realizar esta ação, o bearer token deve ser informado no header da requisição   
+         Deve gerar uma mensagem "Livro atualizado com sucesso" em caso de sucesso e retornar o codigo 200
+         Deve gerar uma mensagem "Livro com ID inválido" em caso de falha e retornar o codigo 404    
+
+ - PATCH - Deve atualizar os dados do livro, informando o id criado anteriormente
+           usuário deve estar logado para realizar esta ação, o bearer token deve ser informado no header da requisição
+           Deve gerar uma mensagem "Livro atualizado com sucesso" em caso de sucesso e retornar o codigo 200
+           Deve gerar uma mensagem "Livro com ID inválido" em caso de falha e retornar o codigo 404    
+ 
+ - DELETE - Deve excluir os dados do livro, informando o id criado anteriormente
+            Deve gerar uma mensagem "Livro excluido com sucesso" em caso de sucesso e retornar o codigo 200
+            Deve gerar uma mensagem "Livro com ID inválido" em caso de falha e retornar o codigo 400    
+            Deve gerar uma mensagem "Livro já excluído" em caso de falha e retornar o codigo 404  
+ 
+CRUD de Loja
+
+ - POST - campos: nome,endereço,cep,telefone.
+          usuário deve estar logado para realizar esta ação, o bearer token deve ser informado no header da requisição  
+          Deve gerar um ID ao criar com sucesso
+          Deve gerar uma mensagem "Loja cadastrado com sucesso" em caso de sucesso e retornar o codigo 201
+          Deve gerar uma mensagem "Loja já existe" em caso de falha e retornar o codigo 404    
+
+ - GET - Deve retornar a Loja cadastrado informando o id criado anteriormente
+         Deve retornar "Usuário nao encontrado" em caso de falha e retornar o codigo 404 
+
+ - PUT - Deve atualizar os dados da Loja, informando o id criado anteriormente
+         usuário deve estar logado para realizar esta ação, o bearer token deve ser informado no header da requisição
+         Deve gerar uma mensagem "Loja atualizado com sucesso" em caso de sucesso e retornar o codigo 200
+         Deve gerar uma mensagem "Loja com ID inválido" em caso de falha e retornar o codigo 404    
+
+ - PATCH - Deve atualizar os dados da Loja, informando o id criado anteriormente
+           usuário deve estar logado para realizar esta ação, o bearer token deve ser informado no header da requisição 
+           Deve gerar uma mensagem "Loja atualizado com sucesso" em caso de sucesso e retornar o codigo 200
+           Deve gerar uma mensagem "Loja com ID inválido" em caso de falha e retornar o codigo 404    
+ 
+ - DELETE - Deve excluir os dados da Loja, informando o id criado anteriormente
+            Deve gerar uma mensagem "Loja excluido com sucesso" em caso de sucesso e retornar o codigo 200
+            Deve gerar uma mensagem "Loja com ID inválido" em caso de falha e retornar o codigo 400    
+            Deve gerar uma mensagem "Loja já excluído" em caso de falha e retornar o codigo 404   
+
+CRUD de Carrinho
+
+ - POST - campos: id usuario,id Livro, id Loja e quantidade.
+          usuário deve estar logado para realizar esta ação, o bearer token deve ser informado no header da requisição
+          Deve gerar um ID ao criar com sucesso
+          Deve gerar uma mensagem "Carrinho cadastrado com sucesso" em caso de sucesso e retornar o codigo 201
+          Deve gerar uma mensagem "Carrinho já existe" em caso de falha e retornar o codigo 404    
+   
+ - GET - Deve retornar o Carrinho cadastrado informando o id criado anteriormente
+         Deve retornar "Usuário nao encontrado" em caso de falha e retornar o codigo 404 
+
+ - PUT - Deve atualizar os dados do Carrinho, informando o id criado anteriormente
+         usuário deve estar logado para realizar esta ação, o bearer token deve ser informado no header da requisição
+         Deve gerar uma mensagem "Carrinho atualizado com sucesso" em caso de sucesso e retornar o codigo 200
+         Deve gerar uma mensagem "Carrinho com ID inválido" em caso de falha e retornar o codigo 404    
+
+ - PATCH - Deve atualizar os dados do Carrinho, informando o id criado anteriormente
+           usuário deve estar logado para realizar esta ação, o bearer token deve ser informado no header da requisição 
+           Deve gerar uma mensagem "Carrinho atualizado com sucesso" em caso de sucesso e retornar o codigo 200
+           Deve gerar uma mensagem "Carrinho com ID inválido" em caso de falha e retornar o codigo 404    
+ 
+ - DELETE - Deve excluir os dados do Carrinho, informando o id criado anteriormente
+            Deve gerar uma mensagem "Carrinho excluido com sucesso" em caso de sucesso e retornar o codigo 200
+            Deve gerar uma mensagem "Carrinho com ID inválido" em caso de falha e retornar o codigo 400    
+            Deve gerar uma mensagem "Carrinho já excluído" em caso de falha e retornar o codigo 404  
+
+Quero que gere essa api e rode em node.js com documentação no swagger
+
+   
+
